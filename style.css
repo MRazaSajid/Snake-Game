@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("../snake pic.avif") no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body {
+    position: relative;
+}
+
+#board {
+    background: linear-gradient(grey, white);
+    width: 90vmin;
+    height: 92vmin;
+    opacity: 0.6;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(18, 1fr);
+}
+
+.head {
+    background: linear-gradient(red, purple);
+    border: 2px solid palegreen;
+    transform: scale(1.02);
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.snake {
+    background-color: rgb(255, 149, 0);
+    border: 0.25vmin solid white;
+    border-radius: 12px;
+}
+
+.food {
+    background: linear-gradient(blue, yellow);
+    border: 0.25vmin solid black;
+    border-radius: 8px;
+}
+
+#scoreBox,
+#highscoreBox {
+    position: absolute;
+    top: 10px;
+    font-size: 30px;
+    color: white;
+    font-family: "Bungee Tint", sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+#scoreBox {
+    left: 10px;
+}
+
+#highscoreBox {
+    left: 220px;
+}
